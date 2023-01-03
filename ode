@@ -49,8 +49,8 @@ while True:
                 istenenElmaKg=int(input("Kaç kilo alırdınız?: "))
                 manavElmaKg+=(istenenElmaKg)
                 istenenElmaKg-=toptanciElmaKg
-            #elif secimManav!=meyve:
-             #   print("Bu ürün biz de bulunmamaktadır!")
+            # elif secimManav!=meyve:
+            #    print("Bu ürün biz de bulunmamaktadır!")
 
 
             elif secimManav=="Armut":
@@ -173,7 +173,7 @@ while True:
             print("Meyvelerimiz: ",manavMeyveListe)
             print("Elma STOK\t:\t",manavElmaKg,"\nArmut STOK\t:\t",manavArmutKg,"\nKiraz STOK\t:\t",manavKirazKg,"\nMuz STOK\t:\t",manavMuzKg,"\nÇilek STOK\t:\t",manavCilekKg)
 
-            musteriSecim1=input("Hangi meyveyi istersiniz?")
+            musteriSecim1=input("Hangi meyveyi istersiniz?\n0-ÇIKIŞ")
             if musteriSecim1=="Elma":
                 musteriMeyveSepet.append(musteriSecim1)
                 istMusteriElmaKG=int(input("Kaç kilo istersiniz?"))
@@ -204,18 +204,22 @@ while True:
                 musteriCilekKg+=(istMusteriCilekKG)
                 istMusteriCilekKG-=manavCilekKg
 
-                arzu=input("Başka bir arzunuz var mı?")
-                if arzu=="Evet" or "evet":
-                    continue
-                else:
-                    break
+            elif musteriSecim1==0:
+                print("Çıkılıyor!")
+                break
+
+            arzu=input("Başka bir arzunuz var mı?")
+            if arzu=="Evet" or "evet":
+                continue
+            else:
+                break
 
         elif musteriSecim==2:
             while True:
                 print("Sebzelerimiz: ",manavSebzeListe)
                 print("Patates STOK:\t",manavPatatesKg,"\nDomates STOK:\t",manavDomatesKg,"\nPırasa STOK\t:\t",manavPirasaKg,"\nIspanak STOK:\t",manavIspanakKg,"\nSoğan STOK\t:\t",manavSoganKg)
 
-                musteriSecim2=input("Hangi sebzeyi istersiniz?")
+                musteriSecim2=input("Hangi sebzeyi istersiniz?\n0-ÇIKIŞ")
                 if musteriSecim2=="Patates":
                     musteriSebzeSepet.append(musteriSecim2)
                     istMusteriPatatesKG=int(input("Kaç kilo istersiniz?"))
@@ -245,6 +249,10 @@ while True:
                     istMusteriSoganKG=int(input("Kaç kilo istersiniz?"))
                     musteriSoganKg+=(istMusteriSoganKG)
                     istMusteriSoganKG-=manavSoganKg
+
+                elif musteriSecim2==0:
+                    print("Çıkılıyor!")
+                    break
 
             arzu = input("Başka bir arzunuz var mı?")
             if arzu == "Evet" or "evet":
