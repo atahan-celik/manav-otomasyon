@@ -177,6 +177,9 @@ while True:
             if musteriSecim1=="Elma":
                 musteriMeyveSepet.append(musteriSecim1)
                 istMusteriElmaKG=int(input("Kaç kilo istersiniz?"))
+            elif istenenElmaKg>manavElmaKg:
+                print(f"Elimiz de {manavElmaKg} KG kadar elma bulunmaktadır.")
+                
                 musteriElmaKg+=(istMusteriElmaKG)
                 istMusteriElmaKG-=manavElmaKg
 
