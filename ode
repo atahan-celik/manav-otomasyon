@@ -1,144 +1,135 @@
 ##TOPTANCI
 
-meyve=["Elma","Armut","Kiraz","Muz","Çilek"]
-sebze=["Patates","Domates","Pırasa","Ispanak","Soğan"]
+meyve = ["Elma", "Armut", "Kiraz", "Muz", "Çilek"]
+sebze = ["Patates", "Domates", "Pırasa", "Ispanak", "Soğan"]
 
-#Toptancı Meyve Stok
-toptanciElmaKg=100
-toptanciArmutKg=100
-toptanciKirazKg=100
-toptanciMuzKg=100
-toptanciCilekKg=100
+# Toptancı Meyve Stok
+toptanciElmaKg = 100
+toptanciArmutKg = 100
+toptanciKirazKg = 100
+toptanciMuzKg = 100
+toptanciCilekKg = 100
 
-#Toptancı Sebze Stok
-toptanciPatatesKg=100
-toptanciDomatesKg=100
-toptanciPirasaKg=100
-toptanciIspanakKg=100
-toptanciSoganKg=100
+# Toptancı Sebze Stok
+toptanciPatatesKg = 100
+toptanciDomatesKg = 100
+toptanciPirasaKg = 100
+toptanciIspanakKg = 100
+toptanciSoganKg = 100
 
 ####################################
 
-#Manav Meyve Stok
-manavMeyveListe=[]
-manavElmaKg=0
-manavArmutKg=0
-manavKirazKg=0
-manavMuzKg=0
-manavCilekKg=0
+# Manav Meyve Stok
+manavMeyveListe = []
+manavElmaKg = 0
+manavArmutKg = 0
+manavKirazKg = 0
+manavMuzKg = 0
+manavCilekKg = 0
 
-#Manav Sebze Stok
-manavSebzeListe=[]
-manavPatatesKg=0
-manavDomatesKg=0
-manavPirasaKg=0
-manavIspanakKg=0
-manavSoganKg=0
+# Manav Sebze Stok
+manavSebzeListe = []
+manavPatatesKg = 0
+manavDomatesKg = 0
+manavPirasaKg = 0
+manavIspanakKg = 0
+manavSoganKg = 0
 
 ### Toptancı - Manav
 
 while True:
     print("TOPTANCI: Hoşgeldiniz, Meyve mi alırdınız? Sebze mi?")
-    secim1=int(input("1-MEYVE\n2-SEBZE\n3-ÇIKIŞ"))
-    if secim1==1:
+    secim1 = int(input("1-MEYVE\n2-SEBZE\n3-ÇIKIŞ"))
+    if secim1 == 1:
         while True:
             print("MEYVELERİMİZ")
-            secimManav=(input("Elma\nArmut\nKiraz\nMuz\nÇilek\nÇIKIŞ"))
-            if secimManav=="Elma":
+            secimManav = (input("Elma\nArmut\nKiraz\nMuz\nÇilek\nÇIKIŞ"))
+            if secimManav == "Elma":
                 manavMeyveListe.append(secimManav)
-                istenenElmaKg=int(input("Kaç kilo alırdınız?: "))
-                manavElmaKg+=(istenenElmaKg)
-                istenenElmaKg-=toptanciElmaKg
-            # elif secimManav!=meyve:
-            #    print("Bu ürün biz de bulunmamaktadır!")
+                istenenElmaKg = int(input("Kaç kilo alırdınız?: "))
+                manavElmaKg += (istenenElmaKg)
+                istenenElmaKg -= toptanciElmaKg
 
 
-            elif secimManav=="Armut":
+            elif secimManav == "Armut":
                 manavMeyveListe.append(secimManav)
-                istenenArmutKg=int(input("Kaç kilo alırdınız?: "))
-                manavArmutKg+=(istenenArmutKg)
-                istenenArmutKg-=toptanciArmutKg
+                istenenArmutKg = int(input("Kaç kilo alırdınız?: "))
+                manavArmutKg += (istenenArmutKg)
+                istenenArmutKg -= toptanciArmutKg
 
 
-            elif secimManav=="Kiraz":
+            elif secimManav == "Kiraz":
                 manavMeyveListe.append(secimManav)
-                istenenKirazKg=int(input("Kaç kilo alırdınız?: "))
-                manavKirazKg+=(istenenKirazKg)
-                istenenKirazKg-=toptanciKirazKg
+                istenenKirazKg = int(input("Kaç kilo alırdınız?: "))
+                manavKirazKg += (istenenKirazKg)
+                istenenKirazKg -= toptanciKirazKg
 
-            elif secimManav=="Muz":
+            elif secimManav == "Muz":
                 manavMeyveListe.append(secimManav)
-                istenenMuzKg=int(input("Kaç kilo alırdınız?: "))
-                manavMuzKg+=(istenenMuzKg)
-                istenenMuzKg-=toptanciMuzKg
+                istenenMuzKg = int(input("Kaç kilo alırdınız?: "))
+                manavMuzKg += (istenenMuzKg)
+                istenenMuzKg -= toptanciMuzKg
 
-            elif secimManav=="Çilek":
+            elif secimManav == "Çilek":
                 manavMeyveListe.append(secimManav)
-                istenenCilekKg=int(input("Kaç kilo alırdınız?: "))
-                manavCilekKg+=(istenenCilekKg)
-                istenenCilekKg-=toptanciCilekKg
+                istenenCilekKg = int(input("Kaç kilo alırdınız?: "))
+                manavCilekKg += (istenenCilekKg)
+                istenenCilekKg -= toptanciCilekKg
 
-            elif secimManav=="ÇIKIŞ" or "çıkış":
+            elif secimManav=="ÇIKIŞ":
                 print("Çıkılıyor")
                 break
 
-        arzu=input("Başka bir arzunuz var mı?")
-        if arzu=="Evet" or "evet":
+        arzu = input("Başka bir arzunuz var mı?")
+        if arzu == "Evet" or "evet":
             continue
         else:
             break
 
 
 
-    elif secim1==2:
+    elif secim1 == 2:
         while True:
             print("SEBZELERİMİZ")
-            secimManav2=input("Patates\nDomates\nPırasa\nIspanak\nSoğan\nÇIKIŞ")
-            if secimManav2=="Patates":
+            secimManav2 = input("Patates\nDomates\nPırasa\nIspanak\nSoğan\nÇIKIŞ")
+            if secimManav2 == "Patates":
                 manavSebzeListe.append(secimManav2)
-                istenenPatatesKg=int(input("Kaç kilo alırdınız?: "))
-                manavPatatesKg+=(istenenPatatesKg)
-                istenenPatatesKg-=toptanciPatatesKg
-
-                #for i in manavSebzeListe:
-                    #if i in manavSebzeListe:
-                        #print("Sepete daha önce bu ürün eklendi;",i)
-                        #manavSebzeListe.remove(i)
-                    #else:
-                        #manavSebzeListe.append(secimManav2)
-                        #print("Ürün listeye eklendi")
+                istenenPatatesKg = int(input("Kaç kilo alırdınız?: "))
+                manavPatatesKg += (istenenPatatesKg)
+                istenenPatatesKg -= toptanciPatatesKg
 
 
-            elif secimManav2=="Domates":
+
+            elif secimManav2 == "Domates":
                 manavSebzeListe.append(secimManav2)
-                istenenDomatesKg=int(input("Kaç kilo alırdınız?: "))
-                manavDomatesKg+=(istenenDomatesKg)
-                istenenDomatesKg-=toptanciDomatesKg
+                istenenDomatesKg = int(input("Kaç kilo alırdınız?: "))
+                manavDomatesKg += (istenenDomatesKg)
+                istenenDomatesKg -= toptanciDomatesKg
 
-            elif secimManav2=="Pırasa":
+            elif secimManav2 == "Pırasa":
                 manavSebzeListe.append(secimManav2)
-                istenenPirasaKg=int(input("Kaç kilo alırdınız?: "))
-                manavPirasaKg+=(istenenPirasaKg)
-                istenenPirasaKg-=toptanciPirasaKg
+                istenenPirasaKg = int(input("Kaç kilo alırdınız?: "))
+                manavPirasaKg += (istenenPirasaKg)
+                istenenPirasaKg -= toptanciPirasaKg
 
-            elif secimManav2=="Ispanak":
+            elif secimManav2 == "Ispanak":
                 manavSebzeListe.append(secimManav2)
-                istenenIspanakKg=int(input("Kaç kilo alırdınız?: "))
-                manavIspanakKg+=(istenenIspanakKg)
-                istenenIspanakKg-=toptanciIspanakKg
+                istenenIspanakKg = int(input("Kaç kilo alırdınız?: "))
+                manavIspanakKg += (istenenIspanakKg)
+                istenenIspanakKg -= toptanciIspanakKg
 
-            elif secimManav2=="Soğan":
+            elif secimManav2 == "Soğan":
                 manavSebzeListe.append(secimManav2)
-                istenenSoganKg=int(input("Kaç kilo alırdınız?: "))
-                manavSoganKg+=(istenenSoganKg)
-                istenenSoganKg-=toptanciSoganKg
+                istenenSoganKg = int(input("Kaç kilo alırdınız?: "))
+                manavSoganKg += (istenenSoganKg)
+                istenenSoganKg -= toptanciSoganKg
 
-            elif secimManav2=="ÇIKIŞ":
+            elif secimManav2 =="ÇIKIŞ":
                 print("Çıkılıyor")
                 break
 
-        arzu=input("Başka bir arzunuz var mı?")
-        if arzu=="Evet" or "evet":
+        arzu = input("Başka bir arzunuz var mı?")
+        if arzu == "Evet" or "evet":
             continue
         else:
             break
@@ -146,114 +137,108 @@ while True:
     elif secim1==3:
         break
 
-
 ### Manav - Müşteri
 
-musteriMeyveSepet=[]
-musteriElmaKg=0
-musteriArmutKg=0
-musteriKirazKg=0
-musteriMuzKg=0
-musteriCilekKg=0
+musteriMeyveSepet = []
+musteriElmaKg = 0
+musteriArmutKg = 0
+musteriKirazKg = 0
+musteriMuzKg = 0
+musteriCilekKg = 0
 
-
-musteriSebzeSepet=[]
-musteriPatatesKg=0
-musteriDomatesKg=0
-musteriPirasaKg=0
-musteriIspanakKg=0
-musteriSoganKg=0
+musteriSebzeSepet = []
+musteriPatatesKg = 0
+musteriDomatesKg = 0
+musteriPirasaKg = 0
+musteriIspanakKg = 0
+musteriSoganKg = 0
 
 while True:
     print("MANAVCI: Hoşgeldiniz, hangi ürünümüzü almak istersiniz?")
-    musteriSecim=int(input("SEÇİMİNİZİ YAPABİLİRSİNİZ\n1-MEYVE\n2-SEBZE\n3-ÇIKIŞ"))
-
-    while True:
-        if musteriSecim==1:
-            print("Meyvelerimiz: ",manavMeyveListe)
-            print("Elma STOK\t:\t",manavElmaKg,"\nArmut STOK\t:\t",manavArmutKg,"\nKiraz STOK\t:\t",manavKirazKg,"\nMuz STOK\t:\t",manavMuzKg,"\nÇilek STOK\t:\t",manavCilekKg)
-
-            musteriSecim1=input("Hangi meyveyi istersiniz?\n0-ÇIKIŞ")
-            if musteriSecim1=="Elma":
+    musteriSecim = int(input("SEÇİMİNİZİ YAPABİLİRSİNİZ\n1-MEYVE\n2-SEBZE\n3-ÇIKIŞ"))
+    if musteriSecim==1:
+        while True:
+            musteriSecim1 = input(f"Hangi meyveyi istersiniz?\nMeyvelerimiz :{manavMeyveListe}\nElma STOK\t:\t {manavElmaKg} \nArmut STOK\t:\t {manavArmutKg} \nKiraz STOK\t:\t {manavKirazKg}\nMuz STOK\t:\t {manavMuzKg} \nÇilek STOK\t:\t {manavCilekKg}\nÇIKIŞ")
+            if musteriSecim1 == "Elma":
                 musteriMeyveSepet.append(musteriSecim1)
-                istMusteriElmaKG=int(input("Kaç kilo istersiniz?"))
-            elif istenenElmaKg>manavElmaKg:
-                print(f"Elimiz de {manavElmaKg} KG kadar elma bulunmaktadır.")
-                
-                musteriElmaKg+=(istMusteriElmaKG)
-                istMusteriElmaKG-=manavElmaKg
+                istMusteriElmaKG = int(input("Kaç kilo istersiniz?"))
+                musteriElmaKg += (istMusteriElmaKG)
+                istMusteriElmaKG -= manavElmaKg
 
-            elif musteriSecim1=="Armut":
+            elif musteriSecim1 == "Armut":
                 musteriMeyveSepet.append(musteriSecim1)
-                istMusteriArmutKG=int(input("Kaç kilo istersiniz?"))
-                musteriArmutKg+=(istMusteriArmutKG)
-                istMusteriArmutKG-=manavArmutKg
+                istMusteriArmutKG = int(input("Kaç kilo istersiniz?"))
+                musteriArmutKg += (istMusteriArmutKG)
+                istMusteriArmutKG -= manavArmutKg
 
-            elif musteriSecim1=="Kiraz":
+            elif musteriSecim1 == "Kiraz":
                 musteriMeyveSepet.append(musteriSecim1)
-                istMusteriKirazKG=int(input("Kaç kilo istersiniz?"))
-                musteriKirazKg+=(istMusteriKirazKG)
-                istMusteriKirazKG-=manavKirazKg
+                istMusteriKirazKG = int(input("Kaç kilo istersiniz?"))
+                musteriKirazKg += (istMusteriKirazKG)
+                istMusteriKirazKG -= manavKirazKg
 
-            elif musteriSecim1=="Muz":
+            elif musteriSecim1 == "Muz":
                 musteriMeyveSepet.append(musteriSecim1)
-                istMusteriMuzKG=int(input("Kaç kilo istersiniz?"))
-                musteriMuzKg+=(istMusteriMuzKG)
-                istMusteriMuzKG-=manavMuzKg
+                istMusteriMuzKG = int(input("Kaç kilo istersiniz?"))
+                musteriMuzKg += (istMusteriMuzKG)
+                istMusteriMuzKG -= manavMuzKg
 
-            elif musteriSecim1=="Çilek":
+            elif musteriSecim1 == "Çilek":
                 musteriMeyveSepet.append(musteriSecim1)
-                istMusteriCilekKG=int(input("Kaç kilo istersiniz?"))
-                musteriCilekKg+=(istMusteriCilekKG)
-                istMusteriCilekKG-=manavCilekKg
+                istMusteriCilekKG = int(input("Kaç kilo istersiniz?"))
+                musteriCilekKg += (istMusteriCilekKG)
+                istMusteriCilekKG -= manavCilekKg
 
-            elif musteriSecim1==0:
+            elif musteriSecim1 =="ÇIKIŞ":
                 print("Çıkılıyor!")
                 break
 
-            arzu=input("Başka bir arzunuz var mı?")
-            if arzu=="Evet" or "evet":
-                continue
-            else:
-                break
+        arzu = input("Başka bir arzunuz var mı?")
+        if arzu == "Evet" or "evet":
+            continue
+        else:
+            break
 
-        elif musteriSecim==2:
+    elif musteriSecim == 2:
             while True:
-                print("Sebzelerimiz: ",manavSebzeListe)
-                print("Patates STOK:\t",manavPatatesKg,"\nDomates STOK:\t",manavDomatesKg,"\nPırasa STOK\t:\t",manavPirasaKg,"\nIspanak STOK:\t",manavIspanakKg,"\nSoğan STOK\t:\t",manavSoganKg)
-
-                musteriSecim2=input("Hangi sebzeyi istersiniz?\n0-ÇIKIŞ")
-                if musteriSecim2=="Patates":
+                musteriSecim2 = input(f"Hangi sebzeyi istersiniz?\nSebzelerimiz: {manavSebzeListe}\nPatates STOK:\t {manavPatatesKg} \nDomates STOK:\t {manavDomatesKg} \nPırasa STOK\t:\t {manavPirasaKg}\nIspanak STOK:\t {manavIspanakKg}\nSoğan STOK\t:\t {manavSoganKg}\nÇIKIŞ")
+                if musteriSecim2 == "Patates":
                     musteriSebzeSepet.append(musteriSecim2)
-                    istMusteriPatatesKG=int(input("Kaç kilo istersiniz?"))
-                    musteriPatatesKg+=(istMusteriPatatesKG)
-                    istMusteriPatatesKG-=manavPatatesKg
+                    istMusteriPatatesKG = int(input("Kaç kilo istersiniz?"))
+                    istMusteriPatatesKG >= manavPatatesKg
+                    print("Stoklarımız yetersiz.\nAlabileceğiniz miktar:", manavPatatesKg)
+                    musteriPatatesKg += (istMusteriPatatesKG)
+                    istMusteriPatatesKG -= manavPatatesKg
 
-                elif musteriSecim2=="Domates":
+
+                elif musteriSecim2 == "Domates":
                     musteriSebzeSepet.append(musteriSecim2)
-                    istMusteriDomatesKG=int(input("Kaç kilo istersiniz?"))
-                    musteriDomatesKg+=(istMusteriDomatesKG)
-                    istMusteriDomatesKG-=manavDomatesKg
+                    istMusteriDomatesKG = int(input("Kaç kilo istersiniz?"))
+                    istMusteriDomatesKG >= manavDomatesKg
+                    print("Stoklarımız yetersiz.\nAlabileceğiniz miktar:", manavDomatesKg)
+                    musteriDomatesKg += (istMusteriDomatesKG)
+                    istMusteriDomatesKG -= manavDomatesKg
 
-                elif musteriSecim2=="Pırasa":
+
+                elif musteriSecim2 == "Pırasa":
                     musteriSebzeSepet.append(musteriSecim2)
-                    istMusteriPirasaKG=int(input("Kaç kilo istersiniz?"))
-                    musteriPirasaKg+=istMusteriPirasaKG
-                    istMusteriPirasaKG-=manavPirasaKg
+                    istMusteriPirasaKG = int(input("Kaç kilo istersiniz?"))
+                    musteriPirasaKg += istMusteriPirasaKG
+                    istMusteriPirasaKG -= manavPirasaKg
 
-                elif musteriSecim2=="Ispanak":
+                elif musteriSecim2 == "Ispanak":
                     musteriSebzeSepet.append(musteriSecim2)
-                    istMusteriIspanakKG=int(input("Kaç kilo istersiniz?"))
-                    musteriIspanakKg+=(istMusteriIspanakKG)
-                    istMusteriIspanakKG-=manavIspanakKg
+                    istMusteriIspanakKG = int(input("Kaç kilo istersiniz?"))
+                    musteriIspanakKg += (istMusteriIspanakKG)
+                    istMusteriIspanakKG -= manavIspanakKg
 
-                elif musteriSecim2=="Soğan":
+                elif musteriSecim2 == "Soğan":
                     musteriSebzeSepet.append(musteriSecim2)
-                    istMusteriSoganKG=int(input("Kaç kilo istersiniz?"))
-                    musteriSoganKg+=(istMusteriSoganKG)
-                    istMusteriSoganKG-=manavSoganKg
+                    istMusteriSoganKG = int(input("Kaç kilo istersiniz?"))
+                    musteriSoganKg += (istMusteriSoganKG)
+                    istMusteriSoganKG -= manavSoganKg
 
-                elif musteriSecim2==0:
+                elif musteriSecim2 =="ÇIKIŞ":
                     print("Çıkılıyor!")
                     break
 
@@ -263,11 +248,7 @@ while True:
             else:
                 break
 
-        elif musteriSecim==3:
-            print("Müşteri Sebze: ", musteriSebzeSepet)
-            print("Patates :\t", musteriPatatesKg, "\nDomates :\t", musteriDomatesKg, "\nPırasa \t:\t",musteriPirasaKg, "\nIspanak :\t", musteriIspanakKg, "\nSoğan \t:\t", musteriSoganKg)
-
-            print("Müşteri Meyve: ", musteriMeyveSepet)
-            print("Elma \t:\t", musteriElmaKg, "\nArmut \t:\t", musteriArmutKg, "\nKiraz \t:\t", musteriKirazKg,"\nMuz \t:\t", musteriMuzKg, "\nÇilek \t:\t", musteriCilekKg)
-
-            break
+    elif musteriSecim==3:
+        print(f"Müşteri Sebze: {musteriSebzeSepet}\nPatates :\t {musteriPatatesKg} \nDomates :\t {musteriDomatesKg} \nPırasa \t:\t {musteriPirasaKg}\nIspanak :\t {musteriIspanakKg} \nSoğan \t:\t {musteriSoganKg}")
+        print(f"Müşteri Meyve: {musteriMeyveSepet}\nElma \t:\t {musteriElmaKg} \nArmut \t:\t {musteriArmutKg} \nKiraz \t:\t {musteriKirazKg}\nMuz \t:\t {musteriMuzKg} \nÇilek \t:\t {musteriCilekKg}")
+        break
