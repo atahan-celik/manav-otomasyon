@@ -206,7 +206,7 @@ while True:
                     musteriSebzeSepet.append(musteriSecim2)
                     istMusteriPatatesKG = int(input("Kaç kilo istersiniz?"))
                     istMusteriPatatesKG >= manavPatatesKg
-                    print("Stoklarımız yetersiz.\nAlabileceğiniz miktar:", manavPatatesKg)
+                    print("Stoklarımız yetersiz.\nAlabileceğiniz miktar:", manavPatatesKg,"KG")
                     musteriPatatesKg += (istMusteriPatatesKG)
                     istMusteriPatatesKG -= manavPatatesKg
 
@@ -214,8 +214,8 @@ while True:
                 elif musteriSecim2 == "Domates":
                     musteriSebzeSepet.append(musteriSecim2)
                     istMusteriDomatesKG = int(input("Kaç kilo istersiniz?"))
-                    istMusteriDomatesKG >= manavDomatesKg
-                    print("Stoklarımız yetersiz.\nAlabileceğiniz miktar:", manavDomatesKg)
+                    istMusteriDomatesKG>=manavDomatesKg
+                    print("Stoklarımız yetersiz.\nAlabileceğiniz miktar:", manavDomatesKg,"KG")
                     musteriDomatesKg += (istMusteriDomatesKG)
                     istMusteriDomatesKG -= manavDomatesKg
 
